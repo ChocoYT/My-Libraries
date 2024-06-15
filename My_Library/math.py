@@ -50,6 +50,22 @@ class Vector2():
         self.x /= dist
         self.y /= dist
 
+class Vector3():
+    def __init__(self, x: int | float, y: int | float, z: int | float) -> None:
+        self.x = x
+        self.y = y
+        self.z = z
+
+    def dist(self) -> float:
+        return float(sqrt((self.x ** 2) + (self.y ** 2) + (self.z ** 2)))
+
+    def normalise(self) -> None:
+        dist = self.dist()
+
+        self.x /= dist
+        self.y /= dist
+        self.z /= dist
+
 # Matrix
 class Matrix():
     def __init__(self, matrix: list | tuple, width: int = None, height: int = None, placeholder: int = 0) -> None:
